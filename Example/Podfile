@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HWGuideMaskView_Example' do
+  pod 'HWGuideMaskView', :path => '../'
+
+  target 'HWGuideMaskView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
