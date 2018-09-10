@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.13.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.9"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +20,82 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o67-wA-1ex">
+                                <rect key="frame" x="32" y="87" width="311" height="34"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="fON-2T-F8r"/>
+                                </constraints>
+                                <state key="normal" title="我是菜鸟，我爱写代码"/>
+                                <connections>
+                                    <action selector="topBtnClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="qqQ-FK-j4N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5T-7f-sww">
+                                <rect key="frame" x="32" y="290" width="48" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="Hbx-6j-bXm"/>
+                                    <constraint firstAttribute="height" constant="48" id="eaj-KZ-ol8"/>
+                                </constraints>
+                                <state key="normal" title="左边"/>
+                                <connections>
+                                    <action selector="leftBtnClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="1Ek-La-Hlg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ByC-la-Bz8">
+                                <rect key="frame" x="295" y="290" width="48" height="48"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="3Q9-UM-K36"/>
+                                    <constraint firstAttribute="height" constant="48" id="tqH-sm-i3h"/>
+                                </constraints>
+                                <state key="normal" title="右边"/>
+                                <connections>
+                                    <action selector="rightBtnClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="v8m-0x-yX0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFq-th-flY">
+                                <rect key="frame" x="32" y="585" width="311" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="我是菜鸟，我爱写代码"/>
+                                <connections>
+                                    <action selector="bottomBtnClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="vAE-7n-e8o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="duG-ei-8Dm">
+                                <rect key="frame" x="126" y="36" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startBtnClick:" destination="whP-gf-Uak" eventType="touchUpInside" id="tbc-AA-bkw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="o67-wA-1ex" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="16" id="8xg-Fz-NQg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ByC-la-Bz8" secondAttribute="trailing" constant="16" id="DHj-J2-ady"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="o67-wA-1ex" secondAttribute="trailing" constant="16" id="E7p-Oo-1Te"/>
+                            <constraint firstItem="U5T-7f-sww" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="16" id="KTp-zu-kwB"/>
+                            <constraint firstItem="o67-wA-1ex" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="67" id="Kkh-dh-k2i"/>
+                            <constraint firstItem="U5T-7f-sww" firstAttribute="top" secondItem="o67-wA-1ex" secondAttribute="bottom" constant="169" id="QS1-hx-QaB"/>
+                            <constraint firstItem="ByC-la-Bz8" firstAttribute="top" secondItem="o67-wA-1ex" secondAttribute="bottom" constant="169" id="pou-4Y-cjB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomBtn" destination="RFq-th-flY" id="Fbp-vX-XoO"/>
+                        <outlet property="leftBtn" destination="U5T-7f-sww" id="hpI-8m-gvI"/>
+                        <outlet property="rightBtn" destination="ByC-la-Bz8" id="Uwq-XY-cEQ"/>
+                        <outlet property="startBtn" destination="duG-ei-8Dm" id="JJg-Xm-eMX"/>
+                        <outlet property="topBtn" destination="o67-wA-1ex" id="Ihy-Na-MPG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="304.80000000000001" y="432.23388305847078"/>
         </scene>
     </scenes>
 </document>

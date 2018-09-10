@@ -162,10 +162,10 @@
         switch (guideInfoModel.itemRegion) {
             case HWGuideMaskItemRegion_top:
             {
-                transform = CGAffineTransformScale(transform, -1, 1);
+                transform = CGAffineTransformScale(transform, 1, -1);
                 CGFloat img_x = (CGRectGetWidth(self.bounds) - (textSize.width + guideInfoModel.space + imgSize.width))*0.5;
-                arrowRect = CGRectMake(img_x, CGRectGetMaxY(visualFrame) + imgSize.height, imgSize.width, imgSize.height);
-                textRect = CGRectMake(CGRectGetMaxX(arrowRect) + guideInfoModel.space, CGRectGetMinY(arrowRect) - 5.0, textSize.width, textSize.height);
+                arrowRect = CGRectMake(img_x, CGRectGetMaxY(visualFrame), imgSize.width, imgSize.height);
+                textRect = CGRectMake(CGRectGetMaxX(arrowRect) + guideInfoModel.space, CGRectGetMaxY(arrowRect) - textSize.height + 5.0, textSize.width, textSize.height);
             }
                 break;
             case HWGuideMaskItemRegion_left:
@@ -183,7 +183,7 @@
                 break;
             case HWGuideMaskItemRegion_right:
             {
-                transform = CGAffineTransformScale(transform, 1, -1);
+                transform = CGAffineTransformScale(transform, -1, 1);
                 arrowRect = CGRectMake(CGRectGetMinX(visualFrame) - imgSize.width, CGRectGetMinY(visualFrame) + 18, imgSize.width, imgSize.height);
                 textRect = CGRectMake(CGRectGetMinX(arrowRect) - guideInfoModel.space - textSize.width, CGRectGetMinY(arrowRect) - 5.0, textSize.width, textSize.height);
             }
@@ -244,6 +244,7 @@
     
     
     [UIView animateWithDuration:0.3 animations:^{
+        self.arrowImageView.transform = transform;
         self.arrowImageView.frame = arrowRect;
         self.textLab.frame = textRect;
     }];
