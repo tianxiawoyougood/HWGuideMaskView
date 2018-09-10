@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "HWGuideMaskView.h"
 
 FOUNDATION_EXPORT double HWGuideMaskViewVersionNumber;
 FOUNDATION_EXPORT const unsigned char HWGuideMaskViewVersionString[];

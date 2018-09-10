@@ -190,7 +190,7 @@
                 break;
             case HWGuideMaskItemRegion_leftTop:
                 
-                arrowRect = CGRectMake(CGRectGetCenter(visualFrame).x - imgSize.width * 0.5, CGRectGetMaxY(visualFrame) + guideInfoModel.space, imgSize.width, imgSize.height);
+                arrowRect = CGRectMake(CGRectGetMidX(visualFrame) - imgSize.width * 0.5, CGRectGetMaxY(visualFrame) + guideInfoModel.space, imgSize.width, imgSize.height);
                 if (textSize.width < visualFrame.size.width) {
                     x = CGRectGetMaxX(arrowRect) - textSize.width*0.5;
                 }else{
@@ -201,7 +201,7 @@
                 break;
             case HWGuideMaskItemRegion_leftBottom:
                 
-                arrowRect = CGRectMake(CGRectGetCenter(visualFrame).x - imgSize.width * 0.5, CGRectGetMinY(visualFrame) - guideInfoModel.space - imgSize.height, imgSize.width, imgSize.height);
+                arrowRect = CGRectMake(CGRectGetMidX(visualFrame) - imgSize.width * 0.5, CGRectGetMinY(visualFrame) - guideInfoModel.space - imgSize.height, imgSize.width, imgSize.height);
                 if (textSize.width < visualFrame.size.width) {
                     x = CGRectGetMaxX(arrowRect) - textSize.width * 0.5;
                 }else{
