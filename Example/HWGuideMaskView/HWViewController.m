@@ -89,21 +89,84 @@
 
 - (IBAction)topBtnClick:(id)sender {
     
+    NSMutableArray *models = [[NSMutableArray alloc] init];
+    
+    CGRect topRect = [self.view convertRect:self.topBtn.frame toView:nil];
+    
+    HWGuideInfoModel *topModel = [[HWGuideInfoModel alloc] init];
+    topModel.text = @"实时查看每月预计市场补贴";
+    topModel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:17];
+    topModel.arrowImageName = @"pic_indicator strip_1";
+    topModel.frameBaseWindow = topRect;
+    topModel.insetEdge = UIEdgeInsetsMake(-8, -8, -8, -8);
+    topModel.space = 15;
+    topModel.itemRegion = HWGuideMaskItemRegion_top;
+    [models addObject:topModel];
+    
+    HWGuideMaskView *guideMaskView = [[HWGuideMaskView alloc] initWithFrame:self.view.bounds];
+    [guideMaskView showMaskWithDatas:models];
     
 }
 
 - (IBAction)leftBtnClick:(id)sender {
     
+    NSMutableArray *models = [[NSMutableArray alloc] init];
+    
+    CGRect leftRect = [self.view convertRect:self.leftBtn.frame toView:nil];
+    
+    HWGuideInfoModel *leftModel = [[HWGuideInfoModel alloc] init];
+    leftModel.text = @"实时查看每月预计市场补贴";
+    leftModel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:17];
+    leftModel.arrowImageName = @"pic_indicator strip_3";
+    leftModel.frameBaseWindow = leftRect;
+    leftModel.insetEdge = UIEdgeInsetsMake(-8, -8, -8, -8);
+    leftModel.space = 15;
+    leftModel.itemRegion = HWGuideMaskItemRegion_left;
+    [models addObject:leftModel];
+    
+    HWGuideMaskView *guideMaskView = [[HWGuideMaskView alloc] initWithFrame:self.view.bounds];
+    [guideMaskView showMaskWithDatas:models];
     
 }
 
 - (IBAction)rightBtnClick:(id)sender {
     
+    NSMutableArray *models = [[NSMutableArray alloc] init];
     
+    CGRect rightRect = [self.view convertRect:self.rightBtn.frame toView:nil];
+    
+    HWGuideInfoModel *rightModel = [[HWGuideInfoModel alloc] init];
+    rightModel.text = @"实时查看每月预计市场补贴";
+    rightModel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:17];
+    rightModel.arrowImageName = @"pic_indicator strip_3";
+    rightModel.frameBaseWindow = rightRect;
+    rightModel.insetEdge = UIEdgeInsetsMake(-8, -8, -8, -8);
+    rightModel.space = 15;
+    rightModel.itemRegion = HWGuideMaskItemRegion_right;
+    [models addObject:rightModel];
+    
+    HWGuideMaskView *guideMaskView = [[HWGuideMaskView alloc] initWithFrame:self.view.bounds];
+    [guideMaskView showMaskWithDatas:models];
 }
 
 - (IBAction)bottomBtnClick:(id)sender {
     
+    NSMutableArray *models = [[NSMutableArray alloc] init];
+    
+    CGRect bottomRect = [self.view convertRect:self.bottomBtn.frame toView:nil];
+    
+    HWGuideInfoModel *bottomModel = [[HWGuideInfoModel alloc] init];
+    bottomModel.text = @"实时查看每月预计市场补贴";
+    bottomModel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:17];
+    bottomModel.arrowImageName = @"pic_indicator strip_1";
+    bottomModel.frameBaseWindow = bottomRect;
+    bottomModel.insetEdge = UIEdgeInsetsMake(-8, -8, -8, -8);
+    bottomModel.space = 15;
+    bottomModel.itemRegion = HWGuideMaskItemRegion_bottom;
+    [models addObject:bottomModel];
+    
+    HWGuideMaskView *guideMaskView = [[HWGuideMaskView alloc] initWithFrame:self.view.bounds];
+    [guideMaskView showMaskWithDatas:models];
     
 }
 

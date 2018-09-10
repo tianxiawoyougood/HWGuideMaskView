@@ -86,7 +86,7 @@
 
 - (void)showItemWithData:(HWGuideInfoModel *)guideInfoModel {
     
-//    CGPathRef fromPath = self.maskLayer.path;
+    CGPathRef fromPath = self.maskLayer.path;
     self.maskLayer.fillColor = [UIColor blackColor].CGColor;
     
     //可见区域路径
@@ -102,10 +102,10 @@
     self.layer.mask = self.maskLayer;
     
     //开始移动动画
-    CABasicAnimation *anim = [[CABasicAnimation alloc] init];
+    CABasicAnimation *anim = [CABasicAnimation animationWithKeyPath:@"path"];
     anim.duration = 0.3;
-    anim.fromValue = [NSNumber numberWithFloat:0];
-    anim.toValue = [NSNumber numberWithFloat:1];
+    anim.fromValue = (__bridge id _Nullable)(fromPath);
+    anim.fromValue = toPath;
 
     [self.maskLayer addAnimation:anim forKey:nil];
 }
