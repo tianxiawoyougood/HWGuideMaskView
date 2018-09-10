@@ -1,0 +1,16 @@
+PODS:
+  - HWGuideMaskView (0.1.0)
+
+DEPENDENCIES:
+  - HWGuideMaskView (from `../`)
+
+EXTERNAL SOURCES:
+  HWGuideMaskView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HWGuideMaskView: d07aa430fa171b7aa2462319c7a4c358900dbccc
+
+PODFILE CHECKSUM: 24b69779ee0a1702a0396e6996ca562f3093e1db
+
+COCOAPODS: 1.5.3

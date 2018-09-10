@@ -1,0 +1,22 @@
+{
+  "name": "HWGuideMaskView",
+  "version": "0.1.0",
+  "summary": "A short description of HWGuideMaskView.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "hhttps://github.com/tianxiawoyougood/HWGuideMaskView.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "孙家二哥": "bhua123@163.com"
+  },
+  "source": {
+    "git": "https://github.com/tianxiawoyougood/HWGuideMaskView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "HWGuideMaskView/Classes/**/*"
+}
