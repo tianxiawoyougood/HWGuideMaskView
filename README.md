@@ -5,24 +5,37 @@
 [![License](https://img.shields.io/cocoapods/l/HWGuideMaskView.svg?style=flat)](https://cocoapods.org/pods/HWGuideMaskView)
 [![Platform](https://img.shields.io/cocoapods/p/HWGuideMaskView.svg?style=flat)](https://cocoapods.org/pods/HWGuideMaskView)
 
-## Example
+## 简介
+一个显示用户引导的工具类，可以在一个页面添加多个用户引导。
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-HWGuideMaskView is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+## 安装
 
 ```ruby
 pod 'HWGuideMaskView'
 ```
 
-## Author
+## Demo
 
-571100944@qq.com, sunbinhua@haowumc.com
+```objc
+NSMutableArray *models = [[NSMutableArray alloc] init];
+    
+    CGRect topRect = [self.view convertRect:self.topBtn.frame toView:nil];
+    
+    HWGuideInfoModel *topModel = [[HWGuideInfoModel alloc] init];
+    topModel.text = @"实时查看每月预计市场补贴";
+    topModel.font = [UIFont fontWithName:@"PingFangSC-Regular" size:17];
+    topModel.arrowImageName = @"pic_indicator strip_1";
+    topModel.frameBaseWindow = topRect;
+    topModel.insetEdge = UIEdgeInsetsMake(-8, -8, -8, -8);
+    topModel.space = 15;
+    topModel.itemRegion = HWGuideMaskItemRegion_top;
+    [models addObject:topModel];
+    
+    HWGuideMaskView *guideMaskView = [[HWGuideMaskView alloc] initWithFrame:self.view.bounds];
+    [guideMaskView showMaskWithDatas:models];
+
+```
+
 
 ## License
 
